@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Sample</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/windows.css">
+  </head>
+  <body>
+    <header class="menu" aria-label="Top Menu">
+      <div class="brand">Sample</div>
+      <nav class="group" id="menu-toggles" aria-label="windows"></nav>
+      <div class="spacer"></div>
+      <div class="group small">
+        <button class="btn" id="reset-layout" title="레이아웃 초기화">RESET</button>
+      </div>
+    </header>
+
+    <main id="desktop" class="desktop" aria-label="Workspace"></main>
+
+    <script src="assets/js/app.core.js"></script>
+    <script src="assets/js/app.windows.js"></script>
+    <script src="assets/js/app.main.js"></script>
+  </body>
+</html>
