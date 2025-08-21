@@ -9,12 +9,26 @@
     <link rel="stylesheet" href="assets/css/windows.css">
   </head>
   <body>
-    <header class="menu" aria-label="Top Menu">
-      <div class="brand">Sample</div>
-      <nav class="group" id="menu-toggles" aria-label="windows"></nav>
-      <div class="spacer"></div>
-      <div class="group small">
-        <button class="btn" id="reset-layout" title="레이아웃 초기화">RESET</button>
+    <header class="toolbar">
+      <div class="toolbar-left">
+        <div class="brand">Sample</div>
+        <ul class="menubar">
+          <li>File</li><li>Edit</li><li>Add</li><li>Patterns</li>
+          <li>View</li><li>Options</li><li>Tools</li><li>Help</li>
+        </ul>
+      </div>
+
+      <div class="transport">
+        <button class="tbtn play" title="Play">▶</button>
+        <button class="tbtn stop" title="Stop">■</button>
+        <button class="tbtn rec" title="Record">●</button>
+        <div class="divider"></div>
+        <div class="bpm" title="Tempo">BPM <span id="bpm-val">140.00</span></div>
+        <div class="time" title="Playhead Time">1:01:00</div>
+      </div>
+      <div class="toolbar-right">
+        <nav class="group" id="menu-toggles" aria-label="Windows"></nav>
+        <button class="btn" id="reset-layout" title="레이아웃 초기화">Reset</button>
       </div>
     </header>
 
