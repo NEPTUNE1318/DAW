@@ -1,9 +1,9 @@
 (function(App) {
     const WINDOW_DEFS = [
-        { id: "browser", title: "Browser",      x: 16,  y: 64,  w: 280,  h: 380 },
-        { id: "channel", title: "Channel Rack", x: 310, y: 64,  w: 360,  h: 320 },
-        { id: "playlist", title: "Playlist",    x: 310, y: 400, w: 720,  h: 260 },
-        { id: "mixer", title: "Mixer",          x: 690, y: 64,  w: 520,  h: 320 },
+        { id: "browser", title: "Browser",      x: 16,  y: 64,   w: 260,  h: 560 },
+        { id: "channel", title: "Channel Rack", x: 290, y: 64,   w: 520,  h: 220 },
+        { id: "playlist", title: "Playlist",    x: 820, y: 64,   w: 640,  h: 560 },
+        { id: "mixer", title: "Mixer",          x: 290, y: 300,  w: 520,  h: 324 },
     ];
 
     function buildMenu() {
@@ -16,10 +16,12 @@
             btn.addEventListener('click', () => App.toggleWindow(def.id));
             wrap.appendChild(btn);
         });
-        document.getElementById('reset-layout').addEventListener('click', () => App.resetLayout(WINDOW_DEFS));
+        const resetBtn = document.getElementById('reset-layout');
+        if (resetBtn) resetBtn.addEventListener('click', () => App.resetLayout(WINDOW_DEFS));
     }
 
     window.addEventListener('DOMContentLoaded', () => {
+        App.initialDefs = WINDOW_DEFS.map(d => ({...d}));
         buildMenu();
         WINDOW_DEFS.forEach(def => App.createWindow(def));
     });
